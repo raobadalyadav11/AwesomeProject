@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
 
     },
     cardEvaluted:{
-        backgroundColor:"#161373"
+        backgroundColor:"#161373",
+        // fontSize:6
     }
 })

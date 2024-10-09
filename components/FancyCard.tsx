@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function FancyCard() {
     return (
-        <View style={styles.container}>
+        <View >
             <Text style={styles.headingText}>Trending Places</Text>
             <View style={[styles.card, styles.cardEvaluted]}>
                 <Image
@@ -22,29 +22,61 @@ export default function FancyCard() {
 }
 
 const styles = StyleSheet.create({
-    container:{
-        // flex:1,
-        // justifyContent:'center',
-        // alignItems:'center'
-    },
+   
     headingText: {
         fontSize: 30,
         fontFamily: 'bold',
         paddingHorizontal: 8
     },
-    card: {},
-    cardEvaluted: {},
+    card: {
+        width: 350,
+        height: 360,
+        borderRadius: 6,
+        marginVertical: 12,
+        marginHorizontal: 16
+    },
+    cardEvaluted: {
+        elevation:3,
+        shadowOffset:{
+            width:1,
+            height:1
+        }
+    },
     cardImage: {
         height: 180,
-        width:400,
-        // resizeMode:'cover'
+        // width:400,
+        marginBottom: 8,
+        borderTopLeftRadius: 6,
+        borderTopRightRadius: 6,
+        resizeMode:'cover',
+        backgroundColor:'white'
     },
-    cardBody: {},
-    cardTitle:{},
-    cardLabel:{
+    cardBody: {
+        flex: 1,
+        flexGrow: 1,
+        paddingHorizontal: 12
     },
-    cardDes:{},
-    cardTime:{
+    cardTitle: {
+        color: "orange",
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 6
 
+    },
+    cardLabel: {
+        color: "grey",
+        marginBottom: 6,
+        fontSize: 15
+    },
+    cardDes: {
+        color: "black",
+        fontSize: 16,
+        flexShrink: 1,
+        marginTop: 6
+    },
+    cardTime: {
+        color: "yellow",
+        fontSize:16,
+        fontWeight:'black'
     }
 })
